@@ -98,7 +98,8 @@ class Eloqua_API {
 		$this->connection_args = array(
 			'headers' => array(
 				'Authorization' => $type . ' ' . $this->authstring
-			)
+			),
+                        'timeout' => 10
 		);
 
 		$this->connection = new WP_Http();
